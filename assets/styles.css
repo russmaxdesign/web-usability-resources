@@ -1,0 +1,156 @@
+/* base */
+
+html, body {
+  font: 100%/1.4 helvetica, arial, sans-serif;
+  background: #eee;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 2em;
+  margin: 0 0 .5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 1.5em 0 .5em;
+}
+
+/* container */
+
+.container {
+  margin: 0 auto;
+  width: 40em;
+  padding: 2em;
+  background: #fff;
+}
+
+
+/* messages */
+
+#message > p {
+  overflow: hidden;
+  padding: 0.8em 1em;
+}
+
+#message > p::before {
+  content: "";
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: -0.05em 12px -0.2em 0;
+  background: url("icons.png") no-repeat;
+}
+
+
+/* info message */
+
+#message.info > p {
+  background: #e5f2ff;
+  color: #004;
+}
+#message.info > p::before {
+  background-position: 0 0;
+}
+
+
+/* warning message */
+
+#message.warning > p {
+  background:#ffeddb;
+  color:#420;
+}
+
+#message.warning > p::before {
+  background-position:0 -26px;
+}
+
+
+/* error message */
+
+#message.error > p {
+  background:#ffebea;
+  color:#400;
+}
+
+#message.error > p::before {
+  background-position:0 -52px;
+}
+
+
+/* forms */
+
+.form-container {
+  float: left;
+  width: 100%;
+  padding: 0 0 1.5em;
+}
+
+
+.form-label {
+  float: left;
+  width: 10em;
+  margin: 0 1em 0 0;
+  padding: .3em 0;
+  text-align: right;
+}
+
+.form-input {
+  float: left;
+  width: 15em;
+  margin: 0;
+  font: 100% arial, helvetica, sans-serif;
+  padding: .3em .5em;
+  border: 1px solid #999;
+  background: #efefef;
+}
+
+.form-indent {
+  width: 16em;
+  margin: 0 0 0 11em;
+}
+
+/* button */
+
+.btn {
+  line-height: 1em;
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: .5em 1em;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: .2em;
+  background-image: none;
+  touch-action: manipulation;
+  color: white;
+  background: #0099cc;
+  border: 1px solid #0086b3;
+  font-size: 16px;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.btn:focus {
+  color: white;
+  background: #00394d;
+  border: 1px solid #002633;
+}
+
+.btn:hover {
+  color: white;
+  background: #006080;
+  border: 1px solid #004d66;
+}
+
+.btn:active {
+  color: white;
+  background: #004d66;
+  border: 1px solid #00394d;
+}

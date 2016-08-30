@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Automatically injecting content into the page - aria-live="off"</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Demo: aria-live="off"</h1>
+
+    <div id="message" class="info" aria-live="off"></div>
+
+    <p>It was the best of times, it was the worst of times, it was the age
+    of wisdom, it was the age of foolishness, it was the epoch of belief,
+    it was the epoch of incredulity, it was the season of Light, it was
+    the season of Darkness, it was the spring of hope, it was the winter
+    of despair, we had everything before us, we had nothing before us,
+    we were all going direct to Heaven, we were all going direct the
+    other way.</p>
+
+    <p>In short, the period was so far like the present
+    period, that some of its noisiest authorities insisted on its being
+    received, for good or for evil, in the superlative degree of
+    comparison only.</p>
+
+    <p><a href="#">This is a link</a></p>
+  </div>
+
+  <!-- script -->
+  <script type="text/javascript">
+  (function()
+  {
+
+    window.setTimeout(function()
+    {
+
+      document.getElementById('message').innerHTML = '<p>This is an information notification.</p>';
+
+    }, 10000);
+
+  })();
+  </script>
+
+</body>
+</html>

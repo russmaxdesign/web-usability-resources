@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Grouping form controls</title>
+  <link rel="stylesheet" href="../assets/styles.css" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Grouping form controls</h1>
+
+    <h2>Option 1: fieldset</h2>
+    <form class="example" action="#">
+      <fieldset>
+        <legend>Do you like apples?</legend>
+        <input type="radio" id="apples-y" name="apples"> <label for="apples-y">Yes</label><br>
+        <input type="radio" id="apples-n" name="apples"> <label for="apples-n">No</label>
+      </fieldset>
+    </form>
+
+    <h2>Option 2: using aria-describedby</h2>
+    <form class="example" action="#">
+      <p id="description">What is you favourite day?</p>
+      <input aria-describedby="description" type="radio" id="monday" name="day"> <label for="monday">Monday</label><br>
+      <input aria-describedby="description" type="radio" id="friday" name="day"> <label for="friday">Friday</label>
+    </form>
+
+    <h2>Option 3: radiogroup</h2>
+    <div class="example" role="radiogroup" aria-labelledby="subscription">
+      <p id="subscription">
+        Pick a subscription
+      </p>
+      <input type="radio" id="daily" name="subscribe"><label for="daily"> Daily</label><br>
+      <input type="radio" id="weekly" name="subscribe"><label for="weekly"> Weekly</label><br>
+    </div>
+  </div>
+
+</body>
+</html>

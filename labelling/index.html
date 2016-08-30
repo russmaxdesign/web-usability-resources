@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Labelling form inputs</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>Labelling form inputs</h1>
+
+    <form action="#" method="post">
+      <!-- input 1 -->
+      <div class="form-container">
+        <label class="form-label" for="inputone">Text one</label>
+        <input class="form-input" id="inputone" name="first" type="text">
+      </div>
+      <!-- input 2 -->
+      <div class="form-container">
+        <label>
+          <span class="form-label">Text two</span>
+         <input class="form-input" name="second" type="text">
+        </label>
+      </div>
+      <!-- input 3 -->
+      <div class="form-container">
+        <span class="form-label">Text three</span>
+        <input class="form-input" title="text three" name="third" type="text">
+      </div>
+      <!-- input 4 -->
+      <div class="form-container">
+        <span class="form-label">Text four</span>
+        <input class="form-input" id="fourthinput" name="fourth" type="text">
+      </div>
+      <!-- input 5 -->
+      <div class="form-container">
+        <span class="form-label">Text five</span>
+        <input class="form-input" id="fifthinput" name="fifth" type="text" aria-label="text five">
+      </div>
+      <!-- input 6 -->
+      <div class="form-container">
+        <span class="form-label"></span>
+        <input class="form-input" id="sixthinput" name="sixth" type="text" placeholder="Input six">
+      </div>
+      <!-- input 7 -->
+      <div class="form-container">
+        <span class="form-label"></span>
+        <select class="form-input">
+          <option value="Please"> Please select one</option>
+          <option value="four"> five</option>
+          <option value="six"> seven</option>
+          <option value="eight"> nine</option>
+        </select>
+      </div>
+      <!-- Submit -->
+      <div class="form-indent">
+        <input class="btn" type="submit" value="Submit">
+      </div>
+    </form>
+
+    <p><a href="#">Link at end of form</a></p>
+
+  </div>
+</body>
+</html>
+
