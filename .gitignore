@@ -1,0 +1,8 @@
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+*.codekit
+node_modules
+.tmp
+.sass-cache
+.idea
