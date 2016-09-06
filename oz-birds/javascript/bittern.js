@@ -1,0 +1,2 @@
+// Slideshow
+$('.js-slideshow').slick();
