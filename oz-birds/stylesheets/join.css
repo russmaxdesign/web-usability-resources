@@ -1,0 +1,11 @@
+/* -------------------------------------
+error validation
+------------------------------------- */
+.error
+{
+  display: block;
+  clear: both;
+  margin-left: 185px;
+  font-size: 0.7em;
+  color: red;
+}
