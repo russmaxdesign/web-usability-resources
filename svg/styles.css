@@ -1,0 +1,141 @@
+/* base rules */
+
+body {
+  margin: 40px;
+  padding: 0;
+  color: #333;
+  background: #fff;
+  font-family: 'HelveticaNeue','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 0 0 1em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 150%;
+  margin: 0 0 .5em;
+  line-height: 1.2;
+}
+
+hr {
+  display: block;
+  border: 0;
+  border-bottom: 5px solid #ddd;
+  margin: 3em 0;
+}
+
+ul {
+  margin: 1em 0;
+}
+
+/* table rules */
+
+table {
+  margin: 1em 0 2em;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-weight: bold;
+  padding: 0 0 .5em;
+  text-align: left;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  padding: .5em 1em;
+}
+
+th {
+  font-weight: bold;
+  background: #eee;
+}
+
+/* Container rules */
+
+.container {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+/* Graph rules */
+
+.graph {
+  font-family: 'HelveticaNeue','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Graph1 */
+
+.graph1-0 { fill: #58938a; }
+.graph1-1 { fill: #935fa7; }
+.graph1-2 { fill: #3d77ba; }
+.graph1-3 { fill: #a4c686; }
+.graph1-4 { fill: #e19e40; }
+.graph1-5 { fill: transparent; }
+.graph1-5:hover { fill: rgba(0,0,0,.1); }
+
+.graph :focus .graph1-5 {
+  stroke: rgba(0,0,255,.5);
+  stroke-width: 3;
+}
+
+.graph :active .graph1-5 {
+  stroke: rgba(255,0,0,.5);
+  stroke-width: 3;
+}
+
+/* Graph2 */
+
+.graph2-link {
+  display: inline-block;
+}
+
+.graph2-0 { fill: #e46983; }
+.graph2-1 { fill: #6380c0; }
+.graph2-2 { fill: #efcd85; }
+.graph2-3 { fill: #a7c8e8; }
+.graph2-4 { fill: #e6a07a; }
+.graph2-5 { fill: transparent; }
+.graph2-5:hover { fill: rgba(0,0,0,.1); }
+
+/* Graph3 */
+
+.graph3-link {
+  display: inline-block;
+}
+
+.graph3-0 { fill: red; }
+.graph3-1 { fill: green; }
+.graph3-2 { fill: blue; }
+.graph3-3 { fill: orange; }
+.graph3-4 { fill: pink; }
+
+/* link */
+
+.small-link {
+  font-size: 14px;
+}
+
+.pass,
+.fail {
+  display: inline-block;
+  padding: .2em .5em;
+  border-radius: .3em;
+}
+
+.pass {
+  background: rgba(125,200,125,.5);
+}
+
+.fail {
+  background: rgba(200,0,0,.3);
+}

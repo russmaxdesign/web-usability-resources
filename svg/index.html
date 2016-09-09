@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing SVG Accessibility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="prism.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Testing SVG Accessibility</h1>
+
+    <h2 id="example1">Example 1 - Link inside SVG file</h2>
+    <p>The option below uses the <b><code>xlink:href</code> method</b> to link
+    to the accessible version of the pie chart.</p>
+
+    <svg
+      version="1.1"
+      class="graph graph1"
+      width="350px"
+      height="200px"
+      viewBox="0 0 350 200"
+      preserveAspectRatio="xMinYMin meet"
+      aria-labelledby="title1 desc1"
+    >
+      <title id="title1">Pet Ownership Pie Chart</title>
+      <desc id="desc1">Percentage breakdown of pets owned by Australians</desc>
+      <a xlink:href="table1.html">
+        <path class="graph1-0" d="M100,0v100l-31.7,94.9c10,3.3,20.6,5.1,31.7,5.1c55.2,0,100-44.8,100-100S155.2,0,100,0z"/>
+        <path class="graph1-1" d="M15.1,47.2C5.5,62.5,0,80.6,0,100c0,44.1,28.6,81.6,68.3,94.9C81.6,155,100,100,100,100L15.1,47.2z"/>
+        <path class="graph1-2" d="M36,23.1c-8.2,6.8-15.3,15-21,24.1L100,100L36,23.1z"/>
+        <path class="graph1-3" d="M100,100L65.9,6c-11,4-21.1,9.8-29.9,17.2l0,0L100,100z"/>
+        <path class="graph1-4" d="M100,0C88,0,76.6,2.1,65.9,6l34.1,94V0z"/>
+        <rect x="220" y="21" class="graph1-0" width="20" height="20"/>
+        <rect x="220" y="51" class="graph1-1" width="20" height="20"/>
+        <rect x="220" y="81" class="graph1-2" width="20" height="20"/>
+        <rect x="220" y="111" class="graph1-3" width="20" height="20"/>
+        <rect x="220" y="141" class="graph1-4" width="20" height="20"/>
+        <text transform="matrix(1 0 0 1 244.9995 36.7117)">Dogs 55%</text>
+        <text transform="matrix(1 0 0 1 244.9995 66.7116)">Cats 35%</text>
+        <text transform="matrix(1 0 0 1 244.9995 96.7116)">Birds 10%</text>
+        <text transform="matrix(1 0 0 1 244.9995 126.7116)">Fish 5%</text>
+        <text transform="matrix(1 0 0 1 244.9995 156.7116)">Rodents 4%</text>
+        <rect x="0" y="0" class="graph1-5" width="350" height="200"/>
+      </a>
+    </svg>
+
+    <p><a href="table1.html">Pet Ownership Pie Chart - Alternate Version</a></p>
+
+    <p>Title and description:</p>
+<pre><code class="language-html">&lt;svg aria-labelledby="title1 desc1"&gt;
+  &lt;title id="title1"&gt;Pet Ownership Pie Chart&lt;/title&gt;
+  &lt;desc id="desc1"&gt;Percentage breakdown of pets owned by Australians&lt;/desc&gt;
+&lt;/svg&gt;</code></pre>
+
+    <p>Linking method:</p>
+<pre><code class="language-html">&lt;svg&gt;
+  &lt;a xlink:href="table1.html"&gt;...&lt;/a&gt;
+&lt;/svg&gt;</code></pre>
+    <hr>
+
+    <h2 id="example2">Example 2 - Link around SVG file</h2>
+    <p>The option below uses an <b><code>&lt;a&gt;</code> link wrapped around
+    the svg file</b> to link to the accessible version of the pie chart. This
+    is only valid if there are no interactive elements inside the SVG file.</p>
+
+    <a href="table2.html" class="graph2-link">
+      <svg
+        version="1.1"
+        class="graph graph2"
+        width="350px"
+        height="200px"
+        viewBox="0 0 350 200"
+        preserveAspectRatio="xMinYMin meet"
+        aria-labelledby="title2 desc2"
+      >
+        <title id="title2">Fast Food Pie Chart</title>
+        <desc id="desc2">Percentage breakdown of fast food options</desc>
+        <path class="graph2-0" d="M100,0v100l-31.7,94.9c10,3.3,20.6,5.1,31.7,5.1c55.2,0,100-44.8,100-100S155.2,0,100,0z"/>
+        <path class="graph2-1" d="M15.1,47.2C5.5,62.5,0,80.6,0,100c0,44.1,28.6,81.6,68.3,94.9C81.6,155,100,100,100,100L15.1,47.2z"/>
+        <path class="graph2-2" d="M36,23.1c-8.2,6.8-15.3,15-21,24.1L100,100L36,23.1z"/>
+        <path class="graph2-3" d="M100,100L65.9,6c-11,4-21.1,9.8-29.9,17.2l0,0L100,100z"/>
+        <path class="graph2-4" d="M100,0C88,0,76.6,2.1,65.9,6l34.1,94V0z"/>
+        <rect x="220" y="21" class="graph2-0" width="20" height="20"/>
+        <rect x="220" y="51" class="graph2-1" width="20" height="20"/>
+        <rect x="220" y="81" class="graph2-2" width="20" height="20"/>
+        <rect x="220" y="111" class="graph2-3" width="20" height="20"/>
+        <rect x="220" y="141" class="graph2-4" width="20" height="20"/>
+        <text transform="matrix(1 0 0 1 244.9995 36.7117)">Pizza 55%</text>
+        <text transform="matrix(1 0 0 1 244.9995 66.7117)">Burger 35%</text>
+        <text transform="matrix(1 0 0 1 244.9995 96.7116)">Hotdog 10%</text>
+        <text transform="matrix(1 0 0 1 244.9995 126.7116)">Pie 5%</text>
+        <text transform="matrix(1 0 0 1 244.9995 156.7116)">Chips 4%</text>
+        <rect x="0" y="0" class="graph2-5" width="350" height="200"/>
+      </svg>
+    </a>
+
+    <p><a href="table2.html">Fast Food Pie Chart - Alternate Version</a></p>
+
+    <p>Title and description:</p>
+<pre><code class="language-html">&lt;svg aria-labelledby="title2 desc2"&gt;
+  &lt;title id="title1"&gt;Fast Food Pie Chart&lt;/title&gt;
+  &lt;desc id="desc1"&gt;Percentage breakdown of fast food options&lt;/desc&gt;
+&lt;/svg&gt;</code></pre>
+
+    <p>Linking method (only allowed when wrapping around non-interactive elements):</p>
+<pre><code class="language-html">&lt;a href="table2.html"&gt;
+  &lt;svg&gt;...&lt;/svg&gt;
+&lt;/a&gt;</code></pre>
+    <hr>
+
+    <h2 id="example3">Example 3 - No link directly associated with the SVG file</h2>
+    <p>The option below has <b>no link</b> from the svg file to link to the
+    accessible version of the pie chart.</p>
+
+    <svg
+      version="1.1"
+      class="graph graph3"
+      width="350px"
+      height="200px"
+      viewBox="0 0 350 200"
+      preserveAspectRatio="xMinYMin meet"
+      aria-labelledby="title3 desc3"
+    >
+      <title id="title3">Color Options Pie Chart</title>
+      <desc id="desc3">Percentage breakdown of color options</desc>
+      <path class="graph3-0" d="M100,0v100l-31.7,94.9c10,3.3,20.6,5.1,31.7,5.1c55.2,0,100-44.8,100-100S155.2,0,100,0z"/>
+      <path class="graph3-1" d="M15.1,47.2C5.5,62.5,0,80.6,0,100c0,44.1,28.6,81.6,68.3,94.9C81.6,155,100,100,100,100L15.1,47.2z"/>
+      <path class="graph3-2" d="M36,23.1c-8.2,6.8-15.3,15-21,24.1L100,100L36,23.1z"/>
+      <path class="graph3-3" d="M100,100L65.9,6c-11,4-21.1,9.8-29.9,17.2l0,0L100,100z"/>
+      <path class="graph3-4" d="M100,0C88,0,76.6,2.1,65.9,6l34.1,94V0z"/>
+      <rect x="220" y="21" class="graph3-0" width="20" height="20"/>
+      <rect x="220" y="51" class="graph3-1" width="20" height="20"/>
+      <rect x="220" y="81" class="graph3-2" width="20" height="20"/>
+      <rect x="220" y="111" class="graph3-3" width="20" height="20"/>
+      <rect x="220" y="141" class="graph3-4" width="20" height="20"/>
+      <text transform="matrix(1 0 0 1 244.9995 36.7117)">Red 55%</text>
+      <text transform="matrix(1 0 0 1 244.9995 66.7117)">Green 35%</text>
+      <text transform="matrix(1 0 0 1 244.9995 96.7116)">Blue 10%</text>
+      <text transform="matrix(1 0 0 1 244.9995 126.7116)">Orange 5%</text>
+      <text transform="matrix(1 0 0 1 244.9995 156.7116)">Pink 4%</text>
+    </svg>
+
+    <p><a href="table3.html">Color Pie Chart - Alternate Version</a></p>
+
+    <p>Title and description:</p>
+<pre><code class="language-html">&lt;svg aria-labelledby="title3 desc3"&gt;
+  &lt;title id="title1"&gt;Color Options Pie Chart&lt;/title&gt;
+  &lt;desc id="desc1"&gt;Percentage breakdown of color options&lt;/desc&gt;
+&lt;/svg&gt;</code></pre>
+
+    <p>Linking method:</p>
+<pre><code class="language-html">&lt;!-- No link --&gt;</code></pre>
+
+  </div>
+
+<script src="prism.js"></script>
+</body>
+</html>

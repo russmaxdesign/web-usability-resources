@@ -385,6 +385,11 @@ sidebar
 	margin: 0 10px 0 0;
 }
 
+.discount {
+	margin: 2em 0 0;
+}
+
+
 /* 
 -------------------------------------
 footer
@@ -408,3 +413,51 @@ footer
 	position: absolute;
 	left: -500em;
 }
+
+
+/*
+-------------------------------------
+button
+-------------------------------------
+*/
+
+.btn {
+  line-height: 1em;
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: .5em 1em;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: .2em;
+  background-image: none;
+  touch-action: manipulation;
+  color: white;
+  background: #0099cc;
+  border: 1px solid #0086b3;
+  font-size: 16px;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.btn:focus {
+  color: white;
+  background: #00394d;
+  border: 1px solid #002633;
+}
+
+.btn:hover {
+  color: white;
+  background: #006080;
+  border: 1px solid #004d66;
+}
+
+.btn:active {
+  color: white;
+  background: #004d66;
+  border: 1px solid #00394d;
+}
+
