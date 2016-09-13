@@ -1,4 +1,4 @@
-# Web Usability Accessibiliy Workshop Resources
+# Web Usability Accessibility Workshop Resources
 
 A series of Accessibility examples for Web Usability Workshops.
 
