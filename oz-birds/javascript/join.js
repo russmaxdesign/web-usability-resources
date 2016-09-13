@@ -24,7 +24,7 @@ function validate( $this ) {
 	if( _hasError ) {
 		$this
 			.addClass('has-error')
-			.after('<span class="error js-error" role="alert">' + error + '</span>')
+			.after('<span class="error js-error">' + error + '</span>')
 
 		return {
 			element: $this,
